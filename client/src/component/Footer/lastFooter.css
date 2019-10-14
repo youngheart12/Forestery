@@ -1,0 +1,72 @@
+.lastFooter{
+    display: flex;
+    flex-direction: row;
+   
+}
+.lastFooter>div{
+    flex-grow: 3;
+    background-color:#080808;
+    padding: 16px 32px;
+    color: #6A6A6A;
+}
+.lastFooter .fab{
+font-size: 18px;
+}
+.lastFooter ul{
+    list-style-type:none;
+    padding-top: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    margin: 0px;
+
+}
+.lastFooter li{
+    display: inline;
+    padding-right: 10px;
+}
+.lastFooter li:hover{
+    color: #FFF44F;
+}
+#fb:hover{
+    color: 	#3b5998
+}
+#tw:hover{
+    color: #55acee;
+}
+#in:hover{
+    color: #55acee;
+}
+#wt:hover{
+    color:#43d854;
+}
+#sn:hover{
+    color:#fffa37;
+}
+#insta:hover{
+    color: #f07355;
+}
+button.footerButton.btn.btn-outline-secondary:hover{
+background-color: yellow;
+color: black;
+font-weight: 300px;
+border: 1px solid yellow;
+}
+button.footerButton.btn.btn-outline-secondary{
+    margin: 15px;
+    border-radius: 25px;
+    padding: 5px 13px;
+    
+}
+
+
+/*mobile responsive*/
+
+.lastFootermob
+{
+    display: flex;
+    background-color:#080808;
+    color: #6A6A6A;  
+    padding: 16px 32px;
+    text-align: center;
+}

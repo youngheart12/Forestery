@@ -1,0 +1,33 @@
+.footerDiv{
+    display: flex;
+    flex-direction: row;
+    background-color: #17141E;
+    padding:75px;
+}
+.footerDiv>div{
+color:#6A6A6A;
+margin-right: 65px;
+}
+
+/*mobile responsive*/
+.footerDivmob{
+    display: flex;
+    flex-direction: row;
+    background-color: #17141E;
+    padding:55px;
+}
+.footerDivmob>div{
+    color:#6A6A6A;
+    margin-right: 65px;
+}
+.footerDivmob .fab{
+    font-size:18px;
+}
+.lastglyph{
+    display: inline;
+    padding: 5px;
+    margin: 5px;
+}
+a.nav-link{
+    padding: 0px;
+}
