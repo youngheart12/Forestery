@@ -21,14 +21,16 @@ export class contactus extends Component {
       }
     handleChange=(e)=>{
         this.setState({[e.target.name]:e.target.value});
-        if(this.state.select)
-        {
-            this.setState({openDrops:true})
-        } 
+      if(this.state.select)
+      {
+      this.setState({
+          openDrops:true
+      })
+      }
     }
        
     render() {
-       console.log(this.state)
+  
         return (
            <div>
               <Media query="(max-width: 599px)">
@@ -103,7 +105,7 @@ export class contactus extends Component {
             </div>
              
             ) : (
-                <div>
+                <div className="contact_page">
                 <CompleteHeader></CompleteHeader>
                 <div style={{marginLeft:"25%",marginRight:"25%",marginTop:"3%"}}>
                     <Row>

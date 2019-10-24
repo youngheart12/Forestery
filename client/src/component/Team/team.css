@@ -1,0 +1,29 @@
+.page_main{
+    background-image: url('../../Images//templateTheme.png');
+   
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.page_layout{
+    margin:15%;
+  
+}
+.about_name{
+    font-family: Helvetica;
+    font-size: 3rem;
+    color: white;
+}
+#logo{
+    border-radius: 50%;
+}
+td{
+    padding: 5px 25px;
+    font-family:  Helvetica;
+}
+#desctable{
+    color: grey;
+}
+.page_header{
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}

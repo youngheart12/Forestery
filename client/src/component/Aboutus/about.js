@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import CompleteHeader from '../CompleteHeader/completeheader';
 import Footer from '../Footer/footer';
 import LastFooter from '../Footer/lastFooter';
-
+import Team from '../Team/team';
 import './Wissen.css';
 import {Row,Col ,Card, CardImg, CardText, CardBody,
 CardTitle, CardSubtitle, Button} from 'reactstrap';
@@ -38,54 +38,43 @@ class About extends Component
                 </Col>
             </Row>
             </div>
+            <div style={{backgroundColor:"#F5F5F5"}}>
+                <br></br><br></br>
+            <Team 
+            Color="#2ECA7F"
+            Name="Dilip Kumar Mahto "
+            Age="20"
+            Country="India"
+            Email="manishkumar199222@gmail.com"
+            Role="Backend Developer "
+            City="Dhanbad,JH"
 
-            <div className="our-team">
-            <Row>
-                <Col md={{size:12}} className="company-heading">
-                <h1><b>Meet The Team</b></h1>
-                </Col>
-            </Row>
-            <Row>
-                <Col md={{size:12}} style={{marginBottom: "50px"}}>
-                    <Col md={{size:4}} className="company-box">
-                        <img src={require('../../Images/Saurabhs.png')} style={{height:"200px",width:"200px",margin:"0% 25%",borderRadius:"50%",border:"5px solid white"}}/> 
-                    <div style={{width:"200px",margin:"5% 25%",textAlign:"center"}}>
-                        <h2>Saurabh Singh</h2>
-                        <h5>UI/UX Developer</h5>
-                    </div>                   
-                    </Col>
-                    <Col md={{size:4}} className="company-box">
-                    <img src={require('../../Images/Mayank.png')} style={{height:"200px",width:"200px",margin:"0% 25%",borderRadius:"50%",border:"5px solid white"}}/> 
-                    <div style={{width:"200px",margin:"5% 25%",textAlign:"center"}}>
-                        <h2>Mayank Soni</h2>
-                        <h5>UI/UX Developer</h5>
-                    </div>
-                    </Col>
-                    <Col md={{size:4}} className="company-box">
-                    <img src={require('../../Images/Dilip.jpeg')} style={{height:"200px",width:"200px",margin:"0% 25%",borderRadius:"50%",border:"5px solid white"}}/> 
-                    <div style={{width:"200px",margin:"5% 25%",textAlign:"center"}}>
-                        <h2>Dilip Kumar</h2>
-                        <h5>Backend Developer</h5>
-                    </div>
-                    </Col>
-                </Col>
-                <Col md={{size:12}}>
-                <Col md={{size:3, offset:2}} className="company-box">
-                        <img src={require('../../Images/Bidiman Roy.jpg')} style={{height:"200px",width:"200px",margin:"0% 25%",borderRadius:"50%",border:"5px solid white"}}/> 
-                    <div style={{width:"200px",margin:"5% 25%",textAlign:"center"}}>
-                        <h2>Bidhan Roy</h2>
-                        <h5>Graphic Designer</h5>
-                    </div>                   
-                    </Col>
-                    <Col md={{size:3, offset:1}} className="company-box">
-                    <img src={require('../../Images/Kajanan.png')} style={{height:"200px",width:"200px",margin:"0% 25%",borderRadius:"50%",border:"5px solid white"}}/> 
-                    <div style={{width:"200px",margin:"5% 25%",textAlign:"center"}}>
-                        <h2>Kajanan Siva</h2>
-                        <h5>Backend Developer</h5>
-                    </div>
-                    </Col>
-                </Col>
-            </Row>
+            ></Team>
+            <br></br><br></br>
+            </div>
+            <div style={{backgroundColor:"#F5F5F5"}}>
+                <br></br><br></br>
+            <Team
+             Color="#7E6DF6"
+             Name="Mayank Soni"
+             Age="20"
+             Email="mayanksoni2020@gmail.com"
+             Country="India"
+             Role="Frontend Developer"
+             City="JHANSI,UP"></Team>
+            <br></br><br></br>
+            </div>
+            <div style={{backgroundColor:"#F5F5F5"}}>
+                <br></br><br></br>
+            <Team
+             Color="#FF5722"
+             Name="Saurabh Singh"
+             Age="20"
+             Email="saurabhsingh10101@gmail.com"
+             Country="India"
+             Role="Database Adminstrator"
+             City="KANPUR,UP"></Team>
+            <br></br><br></br>
             </div>
             <Footer></Footer>
             <LastFooter></LastFooter>
