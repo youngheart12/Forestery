@@ -9,8 +9,8 @@ router.post('/signup',(req,res)=>{
     const {name,email,password,pincode}=req.body;
     User.findOne({email}).then((user)=>{
         if(user)
-        return res.status(404).send({
-            emessage:"user already exist"
+        return res.status(400).json({
+            error:"User already exist"
         });
         else{
             const newUser=new User({
@@ -124,18 +124,18 @@ router.post('/login', (req, res) => {
   
     // Simple validation
     if(!email || !password) {
-      return res.status(400).json({ msg: 'Please enter all fields' });
+      return res.status(400).json({ error: 'Please enter all fields' });
     }
   
     // Check for existing user
     User.findOne({ email })
       .then(user => {
-        if(!user) return res.status(400).json({ msg: 'User Does not exist' });
+        if(!user) return res.status(400).json({ error: 'User Does not exist' });
   
         // Validate password
         bcrypt.compare(password, user.password)
           .then(isMatch => {
-            if(!isMatch) return res.status(400).json({ msg: 'Invalid credentials' });
+            if(!isMatch) return res.status(400).json({ error: 'Invalid credentials' });
   
             jwt.sign(
               { id: user.id },

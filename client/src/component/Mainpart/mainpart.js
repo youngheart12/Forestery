@@ -2,7 +2,8 @@ import React, { Fragment } from 'react';
 import Media from 'react-media';
 import CompleteHeader from '../CompleteHeader/completeheader';
 import Typist from 'react-typist';
- import{Row,Col,Button} from 'reactstrap';
+ import{Row,Col,Button,NavItem} from 'reactstrap';
+ import LoginModal from '../LoginModel/loginmodel';
  import  '../Layout/layout.css';
 class Mainpart extends React.Component {
   render() {
@@ -37,8 +38,11 @@ class Mainpart extends React.Component {
               <li><a href="/">Home</a></li>
               <li><a href="/about">About</a></li>
               <li><a href="/contactus">Contact</a></li>
-              <li><a href="/login">Login</a></li>
+
               <li><a href="/signup">Signup</a></li>
+              <NavItem>
+                <LoginModal></LoginModal>
+              </NavItem>
             </ul>
             <br></br> <br></br> <br></br> <br></br>
             <div>

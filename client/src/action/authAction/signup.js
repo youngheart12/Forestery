@@ -3,7 +3,7 @@ import {REGISTER_SUCCESS,REGISTER_FAIL,LOGOUT_SUCCESS,LOGIN_FAIL,LOGIN_SUCCESS,R
 import axios from 'axios';
 
 export const loadUser=({token,id})=>dispatch=>{
-    console.log("i am called")
+  
     const config = {
         headers: {
           'Content-Type': 'application/json'
@@ -40,7 +40,8 @@ export const register = ({ name, email, password }) => dispatch => {
       )
       .catch(err => {
         dispatch({
-          type: REGISTER_FAIL
+          type: REGISTER_FAIL,
+          payload:err.response.data
         });
       });
       
@@ -79,7 +80,8 @@ export const register = ({ name, email, password }) => dispatch => {
         //   returnErrors(err.response.data, err.response.status, 'LOGIN_FAIL')
         // );
         dispatch({
-          type: LOGIN_FAIL
+          type: LOGIN_FAIL,
+          payload:err.response.data
         });
       });
   };

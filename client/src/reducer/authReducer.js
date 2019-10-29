@@ -1,9 +1,10 @@
-import {USER_LOADING,REGISTER_FAIL,REGISTER_SUCCESS,LOGIN_SUCCESS,LOGOUT_SUCCESS, REGISTER_NEW_SUCCESS} from '../action/types';
+import {USER_LOADING,REGISTER_FAIL,REGISTER_SUCCESS,LOGIN_SUCCESS,LOGOUT_SUCCESS, REGISTER_NEW_SUCCESS, LOGIN_FAIL} from '../action/types';
 const initialState={
     isLoading:false,
     isAuthenticated:false,
     user:null,
-    filled:false
+    filled:false,
+    error:null
 };
 export default function(state=initialState,action)
 {
@@ -24,6 +25,13 @@ export default function(state=initialState,action)
                     isLoading: false,
                     
                   }; 
+                  case LOGIN_FAIL:
+                  case REGISTER_FAIL:    
+                      return{
+                          ...state,
+                          isLoading:false,
+                          error:action.payload
+                      }
                   case LOGOUT_SUCCESS:
                       {
                         return {

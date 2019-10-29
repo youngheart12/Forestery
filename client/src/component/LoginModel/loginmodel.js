@@ -102,7 +102,7 @@ class ModalExample extends React.Component {
          </Row>
          </div>
          <ModalFooter style={{textAlign:"center",backgroundColor:"#9288FF",justifyContent:"center",borderTop:"none"}}>
-         <p style={{padding:"0px",margin:"0px",color:"white"}}>Forget your password? Get it Back</p>
+         <p style={{padding:"0px",margin:"0px",color:"white",fontSize:"1rem"}}>Forget your password? Get it Back</p>
          </ModalFooter>
         </Modal>
       </div>
@@ -141,7 +141,7 @@ class ModalExample extends React.Component {
          </Row>
          </div>
          <ModalFooter style={{textAlign:"center",backgroundColor:"#9288FF",justifyContent:"center",borderTop:"none"}}>
-         <p style={{padding:"0px",margin:"0px",color:"white"}}>Forget your password? Get it Back</p>
+         <p style={{padding:"0px",margin:"0px",color:"white",fontSize:"1rem"}}>Forget your password? Get it Back</p>
          </ModalFooter>
         </Modal>
       </div>

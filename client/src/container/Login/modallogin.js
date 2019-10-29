@@ -26,7 +26,7 @@ class ModalExample extends React.Component {
     isAuthenticated: PropTypes.bool,
     error: PropTypes.object.isRequired,
     login: PropTypes.func.isRequired,
-    clearErrors: PropTypes.func.isRequired
+    auth:PropTypes.object.isRequired
   };
   // componentDidUpdate(prevProps) {
   //   const { error,isAuthenticated} = this.props;
@@ -51,6 +51,7 @@ class ModalExample extends React.Component {
   };
 
   onSubmit = e => {
+    console.log("hitted");
     e.preventDefault();
 
     const { email, password } = this.state;
@@ -65,7 +66,7 @@ class ModalExample extends React.Component {
 
 
   render() {
-    
+    console.log(this.props.auth)
     return (
       <Media query="(max-width:800px)">
       {matches =>
@@ -116,6 +117,7 @@ class ModalExample extends React.Component {
          
          <div style={{textAlign:"center",margin:"35px"}}>
          <Row style={{margin:"0px"}}>
+        
            <Col md ="12" > <h2>Login</h2></Col>
            <Col md="12" ><h5>New User? Create an account</h5></Col>
          </Row><br></br>
@@ -154,7 +156,8 @@ class ModalExample extends React.Component {
 }
 const mapStateToProps = state => ({
   isAuthenticated:state.auth.isAuthenticated,
-  error: state.error
+  error:state.auth.error,
+  auth:state.auth
 });
 
 export default connect(

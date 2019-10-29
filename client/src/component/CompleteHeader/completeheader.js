@@ -10,7 +10,7 @@ class completeHeader extends Component{
     
     render()
     {
-      console.log(this.props.auth)
+      
         
         return (<div>
             {this.props.auth?<LoginHeader></LoginHeader>:<Header></Header>}

@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React,{Component,Fragment} from 'react';
 import CompleteHeader from '../CompleteHeader/completeheader';
 import Footer from '../Footer/footer';
 import LastFooter from '../Footer/lastFooter';
@@ -7,12 +7,30 @@ import './Wissen.css';
 import {Row,Col ,Card, CardImg, CardText, CardBody,
 CardTitle, CardSubtitle, Button} from 'reactstrap';
 import Typist from 'react-typist';
+import Media from 'react-media';
 class About extends Component
 {
     render()
     {
         return (
-      <div>
+            <div>
+        <Media queries={{
+          small: "(max-width: 599px)",
+          medium: "(min-width: 600px) and (max-width: 1199px)",
+          large: "(min-width: 1200px)"
+        }}>
+          {matches => (
+            <Fragment>
+              {matches.small &&<div>
+                  <CompleteHeader></CompleteHeader>
+                  <div className="about-cover">
+                <div className="textPart">
+                <Typist> <p className="main_text">We have a great dedicated Team</p></Typist>
+          </div>
+            </div>
+              </div>}
+              {matches.medium && <p>I am medium!</p>}
+              {matches.large && <div>
           <CompleteHeader></CompleteHeader>
             <div className="about-cover">
                 <div className="textPart">
@@ -22,20 +40,20 @@ class About extends Component
 <br></br><br></br><br></br>
             <div className="our-company">
             <Row>
-                <Col md={{size:12}} className="company-heading">
+                <Col md="12" xs="12" className="company-heading">
                 <h1><b>Our Company</b></h1>
                 </Col>
             </Row>
             <Row>
-                <Col md={{size:3, offset:1}} className="box">
+                <Col md={{size:3, offset:1}} xs="12" className="box">
                 <Col md={{size:12}} className="inBox"> Vision </Col>
                     <p>Our vision is to control and take prevention the forest wildfire with the help of our designed platform.</p>
                 </Col>
-                <Col md="3" className="box">
+                <Col md="3" xs="12" className="box">
                 <Col md={{size:12}} className="inBox"> Mission </Col>
                     <p>Our mission is to become the world's largest Forest Fire Prevention Commitee using today technologies.</p>
                 </Col>
-                <Col md="3" className="box">
+                <Col md="3" xs="12" className="box">
                 <Col md={{size:12}} className="inBox"> Values </Col>
                     <p>We value and respect to our young and talented team members who works with honesty and enthusiasm.</p>
                 </Col>
@@ -82,7 +100,12 @@ class About extends Component
             </div>
             <Footer></Footer>
             <LastFooter></LastFooter>
+      </div>}
+            </Fragment>
+          )}
+        </Media>
       </div>
+      
         );
     }
 }
