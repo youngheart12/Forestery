@@ -1,17 +1,22 @@
 .about-cover{
-    /* background-image: url("../../Images//about-cover.png"); */
-    width: 100%;
-    height: 95vh;
+    background-image: url("../../Images//team1.jpg");
+   height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    color: white;
+    background-color: black;
 }
-#cover-image{
-    width: 100%;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
+.textPart{
+    font-size: 3rem;
+    padding: 45px;
+    text-align: center;
 }
-
+.main_text{
+    font-family: 'Bubblegum Sans', cursive;
+    padding:40px;
+    font-size: 3rem;
+  color:#FAA86F
+;}
 .company-heading{
     text-align: center;
     color: black;

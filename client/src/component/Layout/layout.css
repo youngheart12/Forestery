@@ -105,7 +105,8 @@ padding: 15px 20px;
     font-family: 'Bubblegum Sans', cursive;
     padding:40px;
     font-size: 3rem;
-  color:#0E445E
+  color:#0E445E;
+  margin:0px
 ;}
 .main_button{
 border-radius:40px;
@@ -210,4 +211,22 @@ text-decoration: underline;
     background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right,#673AB7, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         
+}
+.smallbanner{
+    background-image: url('../../Images//foresttt.jpg');
+    background-size: 680px 680px;
+    background-repeat: no-repeat;
+    height: 90vh;
+}
+.middlebanner{
+    background-image: url('../../Images//foresttt.jpg');
+    background-size: 680px 680px;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.mobileHeader{
+    font-family: 'Bubblegum Sans', cursive;
+    color: white;
+    padding: 45px;
+    
 }

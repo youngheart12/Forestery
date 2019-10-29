@@ -6,6 +6,7 @@ import Team from '../Team/team';
 import './Wissen.css';
 import {Row,Col ,Card, CardImg, CardText, CardBody,
 CardTitle, CardSubtitle, Button} from 'reactstrap';
+import Typist from 'react-typist';
 class About extends Component
 {
     render()
@@ -14,7 +15,9 @@ class About extends Component
       <div>
           <CompleteHeader></CompleteHeader>
             <div className="about-cover">
-            <img src={require('../../Images/about-cover1.png')} alt="cover-image" id="cover-image"/>
+                <div className="textPart">
+                <Typist> <p className="main_text">We have a great dedicated Team</p></Typist>
+          </div>
             </div>
 <br></br><br></br><br></br>
             <div className="our-company">
@@ -40,6 +43,7 @@ class About extends Component
             </div>
             <div style={{backgroundColor:"#F5F5F5"}}>
                 <br></br><br></br>
+             
             <Team 
             Color="#2ECA7F"
             Name="Dilip Kumar Mahto "
