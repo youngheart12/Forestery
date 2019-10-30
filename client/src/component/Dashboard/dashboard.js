@@ -34,7 +34,7 @@ navigator.geolocation.getCurrentPosition((position)=>{
           navigator.geolocation.getCurrentPosition((position)=>{
               const lat=position.coords.latitude
               const lon=position.coords.longitude
-              axios.post(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=${api_key}`).then((res)=>{
+              axios.post(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=${api_key}`).then((res)=>{
                   if(res.data)
                   {
                       this.setState({

@@ -1,17 +1,18 @@
-import React,{Component} from 'react';
+import React,{Component,lazy,Suspense} from 'react';
 import {Switch,Route} from 'react-router-dom';
 
-import Signup from './container/Signup/signup';
 import Guard from './container/Guard/guard';
 import Layout from './component/Layout/layout';
 import {loadUser} from './action/authAction/signup';
 import {connect} from 'react-redux';
-import Dashboard from './component/Dashboard/dashboard';
-import Normal from './component/NormalUser/normaluser';
-import About from './component/Aboutus/about';
-import Contact from './component/Contact/contact';
-
 import PropTypes from 'prop-types';
+
+
+const Dashboard=lazy(()=>import('./component/Dashboard/dashboard'));
+const About=lazy(()=>import('./component/Aboutus/about'));
+const Normal=lazy(()=>import('./component/NormalUser/normaluser'));
+const Contact=lazy(()=>import('./component/Contact/contact'))
+const Signup=lazy(()=>import('./container/Signup/signup'))
 class App extends Component{
   
   static propTypes = {
@@ -32,7 +33,7 @@ class App extends Component{
   {
     
   return (
-    
+    <Suspense fallback={<div>Loading...</div>}>
     <Switch>
 <Route path="/" exact component={Layout}></Route>
 <Route path="/signup" component={Signup}></Route>
@@ -42,7 +43,7 @@ class App extends Component{
 <Route path="/about" component={About}></Route>
 <Route path="/contactus" component={Contact}></Route>
     </Switch>
-    
+    </Suspense>
   );
 }
 }
