@@ -1,6 +1,7 @@
 import React,{Fragment} from 'react';
 import {Col,Row,Button,NavLink} from 'reactstrap';
 import Media from 'react-media';
+import AOS from 'aos';
 const history=(props)=>{
     return(
         <div>
@@ -192,7 +193,7 @@ const history=(props)=>{
               {/* large start */}
               {matches.large && 
              <Row style={{ margin: "0px 10%" }}>
-             <Col md={6} xs={6} sm={6} style={{ borderRight: "2px dotted #6d4d8e", position: "relative" }}>
+             <Col md={6} xs={6} sm={6} style={{ borderRight: "2px dotted #6d4d8e", position: "relative" }} data-aos="fade-right" data-aos-duration="1500">
                <div className="dot"></div>
    
    
@@ -237,7 +238,7 @@ const history=(props)=>{
    
              {/* left part end hers */}
    
-             <Col md={6} xs={6} sm={6} >
+             <Col md={6} xs={6} sm={6} data-aos="fade-up-left" data-aos-duration="3000" >
          <div className="rightDot"></div>
          <div className="dateDisplayRight">
                  <b>15 AUGUST 2019</b>

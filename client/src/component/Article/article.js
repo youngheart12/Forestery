@@ -100,8 +100,8 @@ const articles = () => {
               
               }
               {matches.large && 
-             <Row style={{ margin: "25px 45px" }}>
-             <Col md={4} sm={4} >
+             <Row style={{ margin: "25px 45px" }} data-aos="zoom-in-up" data-aos-duration="1500">
+             <Col md={4} sm={4}  >
                  <Card className="box_card">
                      <CardImg top width="100%" src={require('../../Images/beautynature.jpg')} alt="Card image cap" />
                      <CardBody>
@@ -111,7 +111,7 @@ const articles = () => {
                      </CardBody>
                  </Card>
              </Col>
-             <Col md={4} sm={4}>
+             <Col md={4} sm={4} >
                  <Card className="box_card">
                      <CardImg top width="100%" src={require('../../Images/amazon1.jpg')} alt="Card image cap" />
                      <CardBody>
