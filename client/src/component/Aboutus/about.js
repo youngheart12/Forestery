@@ -5,7 +5,7 @@ import LastFooter from '../Footer/lastFooter';
 import Team from '../Team/team';
 import './Wissen.css';
 import {Row,Col ,Card, CardImg, CardText, CardBody,
-CardTitle, CardSubtitle, Button} from 'reactstrap';
+CardTitle, CardSubtitle, Button,Jumbotron} from 'reactstrap';
 import Typist from 'react-typist';
 import Media from 'react-media';
 class About extends Component
@@ -28,6 +28,24 @@ class About extends Component
                 <Typist> <p className="main_text">We have a great dedicated Team</p></Typist>
           </div>
             </div>
+            <br></br><br></br>
+            <div style={{margin:" 15px 35px"}}>
+            <Jumbotron style={{backgroundColor:"#FFFD82",boxShadow:"0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"}}> 
+        <h4>Vision</h4>
+        <p className="lead">Our vision is to control and take prevention the forest wildfire with the help of our designed platform.</p>
+      
+      </Jumbotron>
+      <Jumbotron style={{backgroundColor:"#C2F39F" ,boxShadow:"0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"}}>
+        <h4>Mission</h4>
+        <p className="lead">Our mission is to become the world's largest Forest Fire Prevention Commitee using today technologies.</p>
+      
+      </Jumbotron>
+      <Jumbotron style={{backgroundColor:"#BAA5FF",boxShadow:"0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"}}>
+        <h4>Values</h4>
+        <p className="lead">We value and respect to our young and talented team members who works with honesty and enthusiasm.</p>
+      
+      </Jumbotron>
+      </div>
               </div>}
               {matches.medium && <p>I am medium!</p>}
               {matches.large && <div>

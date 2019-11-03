@@ -26,7 +26,7 @@ class Header extends React.Component {
   }
   render() {
     return (
-      <div class="headerprop">
+      <div className="headerprop">
         <Navbar light expand="md"  className="headerstyle">
           <NavbarBrand href="/"><span style={{color:"yellow"}}>i</span>Forestery</NavbarBrand>
           <NavbarToggler onClick={this.toggle} className="toggler" />

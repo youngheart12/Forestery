@@ -46,6 +46,7 @@ const team=(props)=>{
           </Col>
           <Col md={6} style={{alignItems:"center",padding:"50px"}}>
     <table>
+        <tbody>
         <tr>
             <td>Age</td>
             <td id="desctable">{props.Age}</td>
@@ -66,6 +67,7 @@ const team=(props)=>{
             <td>Freelance</td>
             <td id="desctable">Available</td>
         </tr>
+        </tbody>
     </table>
           </Col>
       </Row>

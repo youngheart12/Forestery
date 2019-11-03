@@ -28,22 +28,7 @@ class ModalExample extends React.Component {
     login: PropTypes.func.isRequired,
     auth:PropTypes.object.isRequired
   };
-  // componentDidUpdate(prevProps) {
-  //   const { error,isAuthenticated} = this.props;
-  //   if (error !== prevProps.error) {
-  //     // Check for register error
-  //     if (error.id === 'LOGIN_FAIL') {
-  //       this.setState({ msg: error.msg.msg });
-  //     } else {
-  //       this.setState({ msg: null });
-  //     }
-  //   }
-
-  //   // If authenticated, close modal
-  //   if(isAuthenticated){
-  //     this.props.history.push('/')
-  //   }
-  // }
+ 
  
 
   onChangeHandler = e => {
@@ -51,7 +36,7 @@ class ModalExample extends React.Component {
   };
 
   onSubmit = e => {
-    console.log("hitted");
+  
     e.preventDefault();
 
     const { email, password } = this.state;
@@ -66,7 +51,7 @@ class ModalExample extends React.Component {
 
 
   render() {
-    console.log(this.props.auth)
+    
     return (
       <Media query="(max-width:800px)">
       {matches =>

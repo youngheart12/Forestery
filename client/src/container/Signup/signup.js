@@ -47,7 +47,7 @@ this.props.register(newUser);
 
     render() {
   
-    
+   
         return (
           <div>
           <Media queries={{
