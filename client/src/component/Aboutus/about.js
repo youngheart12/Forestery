@@ -96,9 +96,9 @@ class About extends Component
                 <br></br><br></br>
             <Team
              Color="#7E6DF6"
-             Name="Mayank Soni"
+             Name="Ravi Mohan Singh"
              Age="20"
-             Email="mayanksoni2020@gmail.com"
+             Email="ravimohan20@gmail.com"
              Country="India"
              Role="Frontend Developer"
              City="JHANSI,UP"></Team>
