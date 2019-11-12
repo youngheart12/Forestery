@@ -13,14 +13,16 @@ const userSchema=new Schema({
         type:String,
         require:true
     },
-    pincode:{
+    lat:{
         type:Number,
-        require:true,
+        require:true
     },
-    message:[{
-        type:Schema.Types.ObjectId,
-        ref:'usermessage'
-    }]
+    lon:{
+        type:Number,
+        require:true
+    }
+
+  
 });
 const User=mongoose.model('user',userSchema);
 module.exports=User;

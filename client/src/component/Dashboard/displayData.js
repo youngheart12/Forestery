@@ -3,8 +3,8 @@ import './dashboard.css';
 import WOW from "wowjs";
 import axios from 'axios'
 import {
-    Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button,Row,Col,Badge
+    Card,  CardBody,
+ Row,Col,Badge
   } from 'reactstrap';
   import Small from './smalljumbo';
   import {getNotified} from '../../action/authAction/signup'
@@ -63,9 +63,11 @@ if(res.data)
             </Col>
             <Col md="6">
             <div className="wow fadeInDown"  >
-                            {this.state.message?<div><h2><Badge color="danger"  style={{padding:"40px",cursor:"pointer"}}>{this.state.message} </Badge></h2>
+                            {this.props.firedata.firestatus?<div><h2><Badge color="danger"  style={{padding:"40px",cursor:"pointer"}}>{this.props.firedata.firestatus} Fire </Badge></h2>
                           
-                            </div>:null}
+                            </div>:<div><h2><Badge color="danger"  style={{padding:"40px",cursor:"pointer"}}>No Fire In Your Area </Badge></h2>
+                          
+                          </div>}
                             </div>
             </Col>
 
@@ -78,10 +80,10 @@ if(res.data)
                 <Small imagename="fire1.svg" data1="5"></Small>
               </Col>
               <Col md="3">
-              <Small imagename="cloudy.svg" data1="60%"></Small> 
+              <Small imagename="cloudy.svg" data1={this.props.firedata.clouddesc}></Small> 
               </Col>
               <Col md="3">
-              <Small imagename="map.svg" data1="Jalandhar"></Small>
+              <Small imagename="map.svg" data1={this.props.firedata.cityname}></Small>
               </Col>
               <Col md="3">
               <Small imagename="global-warming.svg" data1="35"></Small>

@@ -4,9 +4,21 @@ import CompleteHeader from '../CompleteHeader/completeheader';
 import Typist from 'react-typist';
  import{Row,Col,Button,NavItem} from 'reactstrap';
  import LoginModal from '../LoginModel/loginmodel';
+ import{connect} from 'react-redux';
+ import {logout} from '../../action/authAction/signup';
+ import PropTypes from 'prop-types';
  import  '../Layout/layout.css';
 class Mainpart extends React.Component {
+  static propTypes={
+    isAuthenticated:PropTypes.bool,
+    logout:PropTypes.func.isRequired
+  }
+  handleLogout=()=>{
+    this.props.logout();
+    
+  }
   render() {
+   
     return (
       <div>
         <Media queries={{
@@ -34,16 +46,28 @@ class Mainpart extends React.Component {
                 </div>}
               {matches.large && 
             <div className="mainPart">
-            <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/about">About</a></li>
-              <li><a href="/contactus">Contact</a></li>
+              {this.props.isAuthenticated?   <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contactus">Contact</a></li>
+            <li><a href="/normaluser">Touch</a></li>
+            <li><a href="/dashboard">Profile</a></li>
+            <li><a href="#" onClick={this.handleLogout}>Logout</a></li>
+            
+          </ul> :
+             <ul>
+             <li><a href="/">Home</a></li>
+             <li><a href="/about">About</a></li>
+             <li><a href="/contactus">Contact</a></li>
 
-              <li><a href="/signup">Signup</a></li>
-              <NavItem>
-                <LoginModal></LoginModal>
-              </NavItem>
-            </ul>
+             <li><a href="/signup">Signup</a></li>
+             <NavItem>
+               <LoginModal></LoginModal>
+             </NavItem>
+           </ul>
+          
+            }
+           
             <br></br> <br></br> <br></br> <br></br>
             <div>
               <p className="main_quotes" id="getvalue">
@@ -61,4 +85,9 @@ class Mainpart extends React.Component {
     );
   }
 }
-export default Mainpart;
+const mapStateToProps=state=>({
+isAuthenticated:state.auth.isAuthenticated
+})
+
+
+export default connect(mapStateToProps,{logout})( Mainpart);

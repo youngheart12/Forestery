@@ -15,7 +15,7 @@ class LastFooter extends Component{
                 </div>
                     ):(
                         <div className="lastFooter">
-                <div>&copy; 2019 iRooms Technologies Pvt.Ltd.<br></br>All rights reserved. </div>
+                <div>&copy; 2019 iForestery Technologies Pvt.Ltd.<br></br>All rights reserved. </div>
                 <div>We are social <br></br>
                 <ul>
                     <li id="fb"><i class="fab fa-facebook-square"></i></li>

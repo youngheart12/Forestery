@@ -13,10 +13,9 @@ mongoose.connect(db,{
     useCreateIndex:true
 }).then(()=>console.log("mongodb connected")).catch((e)=>console.log(e));
 
-app.use('/play',require('./API/Play/play'));
+
 app.use('/api',require('./API/Auth/auth'))
-app.use('/send',require('./API/Auth/sendMessage'));
-app.use('/data',require('./API/DataApi/authApi'))
+
 
 if (process.env.NODE_ENV === 'production') {
     // Set static folder

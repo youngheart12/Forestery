@@ -3,8 +3,6 @@ import React, { Fragment } from 'react'
 import {Row,Col,Form,FormGroup,Input,Label,Button,Alert,NavLink} from 'reactstrap';
 import {register} from '../../action/authAction/signup';
 import CompleteHeader from '../../component/CompleteHeader/completeheader';
-import {Redirect} from 'react-router-dom';
-import {browserHistory} from 'react-router-dom';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import Media from 'react-media';
@@ -42,14 +40,21 @@ export class signup extends React.Component {
       };
 this.props.register(newUser);    
   };
+  componentDidUpdate(prevProps)
+  {
+    if(prevProps.isAuthenticated !== this.props.isAuthenticated)
+    {
+    this.props.history.push('/');
+    }
+  }
   
- 
 
     render() {
   
-   
+      console.log(this.props.error);
         return (
           <div>
+           
           <Media queries={{
             small: "(max-width: 599px)",
             medium: "(min-width: 600px) and (max-width: 1199px)",
@@ -70,7 +75,7 @@ this.props.register(newUser);
                           <p style={{fontSize:"1rem",color:"#572991"}}className="wow fadeInDown" data-wow-delay="0.6s">
                          Help us in making a better tommorow
                           </p>
-                          {this.props.error?<Alert color="danger" onClick={this.handleError}>{this.props.error.error} &#10005;</Alert>:null}
+                          {this.props.serror?<Alert color="danger" onClick={this.handleError}>{this.props.error.serror} &#10005;</Alert>:null}
                           <Form onSubmit={this.handleSubmit} className="wow zoomIn" data-wow-delay="1s">
             <FormGroup>
               <Label for="exampleEmail">Email <span style={{color:"red"}}>*</span></Label>
@@ -116,7 +121,7 @@ this.props.register(newUser);
                           <p style={{fontSize:"24px",color:"#572991"}}className="wow fadeInDown" data-wow-delay="0.6s">
                          Help in making a better tommorow
                           </p>
-                          {this.props.error?<Alert color="danger" onClick={this.handleError}>{this.props.error.error} &#10005;</Alert>:null}
+                          {this.props.serror?<Alert color="danger" onClick={this.handleError}>{this.props.error.serror} &#10005;</Alert>:null}
                           <Form onSubmit={this.handleSubmit} className="wow zoomIn" data-wow-delay="1s">
             <FormGroup>
               <Label for="exampleEmail">Email <span style={{color:"red"}}>*</span></Label>
@@ -163,7 +168,7 @@ this.props.register(newUser);
                                <p style={{fontSize:"24px",color:"#572991"}}className="wow fadeInDown" data-wow-delay="0.6s">
                               Help in making a better tommorow
                                </p>
-                               {this.props.error?<Alert color="danger" onClick={this.handleError}>{this.props.error.error} &#10005;</Alert>:null}
+                               {this.props.serror?<Alert color="danger" onClick={this.handleError}>{this.props.error.serror} &#10005;</Alert>:null}
                                <Form onSubmit={this.handleSubmit} className="wow zoomIn" data-wow-delay="1s">
                  <FormGroup>
                    <Label for="exampleEmail">Email <span style={{color:"red"}}>*</span></Label>

@@ -6,15 +6,15 @@ const User=require('../../Model/userModel');
 const config=require('config');
 
 router.post('/signup',(req,res)=>{
-    const {name,email,password,pincode}=req.body;
+    const {name,email,password,lat,lon}=req.body;
     User.findOne({email}).then((user)=>{
         if(user)
         return res.status(400).json({
-            error:"User already exist"
+            serror:"User already exist"
         });
         else{
             const newUser=new User({
-                name, email, password,pincode
+                name, email, password,lat,lon
             });
             
             //encryption password
@@ -38,7 +38,9 @@ router.post('/signup',(req,res)=>{
                                   id:user.id ,
                                   name:user.name,
                                   email:user.email,
-                                  pincode:user.pincode
+                                  lat:user.lat,
+                                  lon:user.lon
+
                               }
                           })
                         })
@@ -51,31 +53,7 @@ router.post('/signup',(req,res)=>{
         }
     }).catch((e)=>console.log(e));
 })
-// router.get('/api/auth/access-token').reply((config) => {
-//     const data = JSON.parse(config.data);
-//     const {access_token} = data;
 
-//     try
-//     {
-//         const {id} = jwt.verify(access_token, jwtConfig.secret);
-
-//         const user = _.cloneDeep(authDB.users.find(_user => _user.uuid === id));
-//         delete user['password'];
-
-//         const updatedAccessToken = jwt.sign({id: user.uuid}, jwtConfig.secret, {expiresIn: jwtConfig.expiresIn});
-
-//         const response = {
-//             "user"        : user,
-//             "access_token": updatedAccessToken
-//         };
-
-//         return [200, response];
-//     } catch ( e )
-//     {
-//         const error = "Invalid access token detected";
-//         return [401, {error}];
-//     }
-// });
 router.post('/access',(req,res)=>{
 const tokens=req.body.token;
 const ids=req.body.id;
@@ -99,7 +77,8 @@ try{
               id:user.id ,
               name:user.name,
               email:user.email,
-              pincode:user.pincode
+              lat:user.lat,
+              lon:user.lon
           }
       })
     })
@@ -109,7 +88,8 @@ try{
           id:user.id ,
           name:user.name,
           email:user.email,
-          pincode:user.pincode
+          lat:user.lat,
+          lon:user.lon
       }
     })
     })
@@ -124,18 +104,18 @@ router.post('/login', (req, res) => {
   
     // Simple validation
     if(!email || !password) {
-      return res.status(400).json({ error: 'Please enter all fields' });
+      return res.status(400).json({ lerror: 'Please enter all fields' });
     }
   
     // Check for existing user
     User.findOne({ email })
       .then(user => {
-        if(!user) return res.status(400).json({ error: 'User Does not exist' });
+        if(!user) return res.status(400).json({ lerror: 'User Does not exist' });
   
         // Validate password
         bcrypt.compare(password, user.password)
           .then(isMatch => {
-            if(!isMatch) return res.status(400).json({ error: 'Invalid credentials' });
+            if(!isMatch) return res.status(400).json({ lerror: 'Invalid credentials' });
   
             jwt.sign(
               { id: user.id },
@@ -149,7 +129,9 @@ router.post('/login', (req, res) => {
                   user: {
                     id: user.id,
                     name: user.name,
-                    email: user.email
+                    email: user.email,
+                    lat:user.lat,
+                    lon:user.lon
                   }
                 });
               }

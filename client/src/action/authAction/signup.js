@@ -18,7 +18,7 @@ export const loadUser=({token,id})=>dispatch=>{
        
       ).catch((e)=>console.log("no token"))
 }
-export const register = ({ name, email, password }) => dispatch => {
+export const register = ({ name, email, password,lat,lon }) => dispatch => {
     // Headers
     const config = {
         headers: {
@@ -27,7 +27,7 @@ export const register = ({ name, email, password }) => dispatch => {
       };
   
     // Request body
-    const body = JSON.stringify({ name, email, password });
+    const body = JSON.stringify({ name, email, password,lat,lon });
   
     axios
       .post('/api/signup', body, config)

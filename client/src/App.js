@@ -12,7 +12,7 @@ const Dashboard=lazy(()=>import('./component/Dashboard/dashboard'));
 const About=lazy(()=>import('./component/Aboutus/about'));
 const Normal=lazy(()=>import('./component/NormalUser/normaluser'));
 const Contact=lazy(()=>import('./component/Contact/contact'))
-const Signup=lazy(()=>import('./container/Signup/signup'))
+const Signup=lazy(()=>import('./container/Authorization/Signup/signup'));
 class App extends Component{
   
   static propTypes = {

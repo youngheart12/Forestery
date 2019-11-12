@@ -57,11 +57,12 @@ class ModalExample extends React.Component {
       {matches =>
         matches ? (
           <div style={{margin:"0px"}}>
+            
           <NavLink onClick={this.toggle}  className="coollink">
          Login
         </NavLink>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className} style={{width:"95%"}} >
-         
+       
          <div style={{textAlign:"center",margin:"35px"}}>
          <Row style={{margin:"0px"}}>
            <Col xs ="12" > <h3>Login</h3></Col>
@@ -95,16 +96,18 @@ class ModalExample extends React.Component {
       
         ) : (
           <div>
+          
           <NavLink onClick={this.toggle}  className="coollink">
          Login
         </NavLink>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className} style={{width:"400px"}}>
-         
+       
          <div style={{textAlign:"center",margin:"35px"}}>
          <Row style={{margin:"0px"}}>
         
            <Col md ="12" > <h2>Login</h2></Col>
            <Col md="12" ><h5>New User? Create an account</h5></Col>
+         
          </Row><br></br>
          <Row >
         <Col md={{ size: 10,offset: 1 }}  style={{paddingBottom:"15px"}}>

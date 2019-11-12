@@ -48,7 +48,7 @@ class Example extends React.Component {
           matches ?(
             <div class="headerprop">
         <Navbar light expand="md"  className="headerstyle">
-          <NavbarBrand href="/">iRooms</NavbarBrand>
+        <NavbarBrand href="/"><span style={{color:"yellow"}}>i</span>Forestery</NavbarBrand>
           <NavbarToggler onClick={this.toggle} className="toggler" />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
@@ -87,7 +87,7 @@ class Example extends React.Component {
           ):(
             <div class="headerprop">
             <Navbar light expand="md"  className="headerstyle">
-              <NavbarBrand href="/">Forestery</NavbarBrand>
+            <NavbarBrand href="/"><span style={{color:"yellow"}}>i</span>Forestery</NavbarBrand>
               <NavbarToggler onClick={this.toggle} className="toggler" />
               <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
