@@ -1,18 +1,14 @@
 import React, { Component } from 'react'
 import CompleteHeader from '../CompleteHeader/completeheader';
-import 
-{Row, Col,  Button,NavLink} from 'reactstrap';
-import Counter from '../../Counter/counter';
+import {Row, Col,  Button,NavLink} from 'reactstrap';
+
 import Feedback from '../Feeback/feedback';
 import Footer from '../Footer/footer';
 import LastFooter from '../Footer/lastFooter';
 import './layout.css';
 import Typist from 'react-typist';
-import Small from '../Dashboard/smallcomp';
 import History from '../History/history'
 import Article from '../Article/article';
-import Media from 'react-media';
-import Humancause from '../Humancause/humancause';
 import Content from '../../content/content';
 import Mainpart from '../Mainpart/mainpart';
 import AOS from 'aos'; 

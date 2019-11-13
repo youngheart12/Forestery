@@ -50,7 +50,7 @@ class Mainpart extends React.Component {
             <li><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="/contactus">Contact</a></li>
-            <li><a href="/normaluser">Touch</a></li>
+           
             <li><a href="/dashboard">Profile</a></li>
             <li><a href="#" onClick={this.handleLogout}>Logout</a></li>
             
