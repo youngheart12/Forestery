@@ -72,7 +72,7 @@ class Example extends React.Component {
           </DropdownToggle>
           <DropdownMenu>
           <DropdownItem tag="a" href="/dashboard"   >Profile</DropdownItem>
-            <DropdownItem tag="a" href="/logout"  onClick={this.handleLogout} >Logout</DropdownItem>
+            <DropdownItem tag="a" href="/"  onClick={this.handleLogout} >Logout</DropdownItem>
 
           </DropdownMenu>
         </UncontrolledDropdown>
@@ -113,7 +113,7 @@ class Example extends React.Component {
                       Profile</NavLink>
                   </NavItem>
                   <NavItem>
-                  <NavLink href="#"className="coollink" onClick={this.handleLogout}>
+                  <NavLink href="/"className="coollink" onClick={this.handleLogout}>
                       {/* <i class="fas fa-id-badge"id="try"></i>  */}
                       Logout</NavLink>
                   </NavItem>

@@ -7,7 +7,7 @@ import {loadUser} from './action/authAction/signup';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 
-
+import Nomatch from './component/NormalUser/normaluser';
 const Dashboard=lazy(()=>import('./component/Dashboard/dashboard'));
 const About=lazy(()=>import('./component/Aboutus/about'));
 const Normal=lazy(()=>import('./component/NormalUser/normaluser'));
@@ -42,6 +42,7 @@ class App extends Component{
 <Route path="/normaluser" component={Normal}></Route>
 <Route path="/about" component={About}></Route>
 <Route path="/contactus" component={Contact}></Route>
+<Route path="*" component={Nomatch}></Route>
     </Switch>
     </Suspense>
   );

@@ -28,23 +28,7 @@ class ModalExample extends React.Component {
     login: PropTypes.func.isRequired,
     clearErrors: PropTypes.func.isRequired
   };
-  // componentDidUpdate(prevProps) {
-  //   const { error,isAuthenticated} = this.props;
-  //   if (error !== prevProps.error) {
-  //     // Check for register error
-  //     if (error.id === 'LOGIN_FAIL') {
-  //       this.setState({ msg: error.msg.msg });
-  //     } else {
-  //       this.setState({ msg: null });
-  //     }
-  //   }
-
-  //   // If authenticated, close modal
-  //   if(isAuthenticated){
-  //     this.props.history.push('/')
-  //   }
-  // }
- 
+  
 
   onChangeHandler = e => {
     this.setState({ [e.target.name]: e.target.value });
@@ -60,7 +44,13 @@ class ModalExample extends React.Component {
     };
     this.props.login(user);
   }
-  
+  componentDidUpdate(prevProps)
+  {
+    if(prevProps.isAuthenticated !== this.props.isAuthenticated)
+    {
+    this.props.history.push('/');
+    }
+  }
 
 
 
@@ -83,13 +73,13 @@ class ModalExample extends React.Component {
          </Row><br></br>
          <Row >
         <Col xs={{ size: 10,offset: 1 }}  style={{paddingBottom:"15px"}}>
-          <Input type="text" placeholder="MR John won't work here"
+          <Input type="text" placeholder="Your email id please"
            onChange={this.onChangeHandler}
            name="email"/>
         </Col>
         
         <Col xs={{size:10,offset:1}} style={{paddingBottom:"15px"}}>
-          <Input type="password" placeholder="MR John won't work here"
+          <Input type="password" placeholder="Your password please"
           name="password"
            onChange={this.onChangeHandler}/>
         </Col>
@@ -121,13 +111,13 @@ class ModalExample extends React.Component {
          </Row><br></br>
          <Row >
         <Col md={{ size: 10,offset: 1 }}  style={{paddingBottom:"15px"}}>
-          <Input type="text" placeholder="MR John won't work here"
+          <Input type="text" placeholder="Your email id please"
           onChange={this.onChangeHandler}
           name="email"/>
         </Col>
         
         <Col md={{size:10,offset:1}} style={{paddingBottom:"15px"}}>
-          <Input type="password" placeholder="MR John won't work here"
+          <Input type="password" placeholder="Your password please"
           onChange={this.onChangeHandler} 
           name="password"
           />
