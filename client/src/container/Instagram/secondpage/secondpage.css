@@ -1,0 +1,68 @@
+.parenttop{
+    font-family: 'Segoe UI';
+}
+.parent{
+    background-color: #EE4957;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+.parent p{
+    margin: 0px;
+    padding: 0px;
+}
+.child{
+    margin: 10px 35px;
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 600;
+}
+.in 
+{
+    display: flex;
+    flex-direction: row;
+  
+}
+.in input[type="text"]
+
+{
+border: none;
+border-color: inherit;
+border-bottom: 1px solid black;
+border-radius: 0px;
+margin-right: 5px;
+}
+.child p{
+    margin: 0px;
+    padding: 0px;
+}
+.insideChild{
+    text-align: center;
+    margin: 10px 35px;
+  
+}
+#partitioned {
+    padding-left: 15px;
+    letter-spacing: 42px;
+    border: 0;
+    background-image: linear-gradient(to left, black 70%, rgba(255, 255, 255, 0) 0%);
+    background-position: bottom;
+    background-size: 50px 1px;
+    background-repeat: repeat-x;
+    background-position-x: 35px;
+    width: 220px;
+  }
+.bu{
+    margin: 10px 35px;
+}
+.insideChild p{
+    margin: 0px;
+    padding: 0px;
+}
+.insidedeep{
+    margin: 20px 35px;
+}
+.insidedeep p{
+    margin: 0px;
+    padding: 0px;
+}
