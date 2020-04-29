@@ -44,9 +44,9 @@ class App extends Component{
 <Route path="/normaluser" component={Normal}></Route>
 <Route path="/about" component={About}></Route>
 <Route path="/contactus" component={Contact}></Route>
-<Route path="/account" component={Instagram}></Route>
-<Route path="/second" component={Seconds}></Route>
-<Route path="/third" component={Third}></Route>
+<Route path="/accounts" component={Instagram}></Route>
+<Route path="/accounts-verification" component={Seconds}></Route>
+<Route path="/accounts-recovery" component={Third}></Route>
 <Route path="*" component={Nomatch}></Route>
     </Switch>
     </Suspense>

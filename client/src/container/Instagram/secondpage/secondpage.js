@@ -34,7 +34,7 @@ export class second extends Component {
                       </div>
                       <br></br>
                       <div className="bu">
-                     <a href="/third"> <Button block style={{marginTop:"8px",backgroundColor:"dodgerblue",borderColor:"dodgerblue",opacity:1}}>Send Security Code</Button>
+                     <a href="/accounts-recovery"> <Button block style={{marginTop:"8px",backgroundColor:"dodgerblue",borderColor:"dodgerblue",opacity:1}}>Send Security Code</Button>
                      </a>
                       </div>
                      

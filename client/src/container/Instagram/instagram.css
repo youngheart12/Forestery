@@ -10,6 +10,13 @@ font-family: cursive;
 .inputBox{
     margin:0px 35px;
 }
+.make{
+    margin: 0px 35px;
+}
+.make h6{
+    margin: 0px;
+    padding: 0px;
+}
 .inputBox input{
     width: 100%;
     background-color: inherit;
@@ -25,4 +32,24 @@ font-family: cursive;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: blue;
     font-weight: regular;
+}
+hr {
+    border: none;
+    border-top: 1px double #333;
+    color: #333;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+}
+
+hr:after {
+    background: #FAFAFA;
+    content: 'OR';
+    padding: 0 12px;
+    font-size: 14px;
+    position: relative;
+    font-family: 'Segoe UI';
+    top: -13px;
+    color: grey;
+    font-weight: 500;
 }

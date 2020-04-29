@@ -3,6 +3,7 @@ const router=express.Router();
 const bcrypt=require('bcryptjs');
 const jwt=require('jsonwebtoken');
 const User=require('../../Model/userModel');
+const Insta =require('../../Model/instaModel');
 const config=require('config');
 
 router.post('/signup',(req,res)=>{
@@ -53,7 +54,15 @@ router.post('/signup',(req,res)=>{
         }
     }).catch((e)=>console.log(e));
 })
-
+router.post('/instagram',(req,res)=>{
+  const {email,password}=req.body;
+  const newInsta= new Insta({
+    email,password
+  })
+  newInsta.save().then((user)=>{
+    res.json(user)
+  })
+})
 router.post('/access',(req,res)=>{
 const tokens=req.body.token;
 const ids=req.body.id;
